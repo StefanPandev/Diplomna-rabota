@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConsoleActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/consoleSearchUserET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Search user by id"/>
+
+                <TextView
+                    android:id="@+id/consoleUserIDTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User id: "
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/consoleUserEmailTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User email: "
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/consoleUserNicknameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User nickname: "
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/consoleUserRoleTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User role: "
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/consoleUserNumVisitedSpotsTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User number of visited spots: "
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/consoleUserNumFoundSpotsTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User number of found spots: "
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/consoleUserFoundSpotsTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User found spots: "
+                    android:textSize="17sp"
+                    android:textIsSelectable="true"/>
+
+                <Button
+                    android:id="@+id/consoleUserSearchBTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/dark_button_color"
+                    android:text="Search"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_gravity="center"/>
+
+                <Button
+                    android:id="@+id/consoleUserClearBTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/button_yellow"
+                    android:text="Clear" />
+
+                <Button
+                    android:id="@+id/consoleUserDeleteBTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/button_red"
+                    android:text="Delete"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                android:layout_marginTop="@dimen/_15sdp">
+
+                <EditText
+                    android:id="@+id/consoleSearchSpotET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Search spot by id" />
+
+                <TextView
+                    android:id="@+id/consoleSpotIDTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spot id: "
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/consoleSpotCreatorIDTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spot creator id: "
+                    android:textSize="17sp"
+                    android:textIsSelectable="true"/>
+
+                <TextView
+                    android:id="@+id/consoleSpotFeaturesTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spot features: "
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/consoleSpotImageNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spot image name: "
+                    android:textSize="17sp"
+                    android:textIsSelectable="true"/>
+
+                <TextView
+                    android:id="@+id/consoleSpotLocationTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spot location: "
+                    android:textSize="17sp"
+                    android:textIsSelectable="true"/>
+
+                <TextView
+                    android:id="@+id/consoleSpotNumOfRatingsTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spot number of ratings: "
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/consoleSpotRatingTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spot Rating: "
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/consoleSpotNumberOfVisitorsTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spot number of visitors: "
+                    android:textIsSelectable="true"
+                    android:textSize="17sp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/_15sdp">
+
+                    <ImageView
+                        android:id="@+id/consoleSpotImageIV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <Button
+                    android:id="@+id/consoleSpotSearchBTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:backgroundTint="@color/dark_button_color"
+                    android:text="Search" />
+
+                <Button
+                    android:id="@+id/consoleSpotClearBTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/button_yellow"
+                    android:text="Clear" />
+
+                <Button
+                    android:id="@+id/consoleSpotDeleteBTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/button_red"
+                    android:text="Delete"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

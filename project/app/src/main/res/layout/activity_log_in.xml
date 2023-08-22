@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogInActivity"
+    android:background="@drawable/log_in_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/LogInPageEmailET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LogInPageTitle"
+                app:layout_constraintVertical_bias="0.15" />
+
+            <TextView
+                android:id="@+id/LogInPageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log In "
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.07999998" />
+
+            <EditText
+                android:id="@+id/LogInPagePasswordET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_28sdp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="@+id/LogInPageEmailET"
+                app:layout_constraintStart_toStartOf="@+id/LogInPageEmailET"
+                app:layout_constraintTop_toBottomOf="@+id/LogInPageEmailET" />
+
+            <Button
+                android:id="@+id/LogInPageLogInBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:backgroundTint="@color/dark_button_color"
+                android:text="Login"
+                app:layout_constraintEnd_toEndOf="@+id/LogInPagePasswordET"
+                app:layout_constraintStart_toStartOf="@+id/LogInPagePasswordET"
+                app:layout_constraintTop_toBottomOf="@+id/LogInPagePasswordET" />
+
+            <TextView
+                android:id="@+id/LogInPageRegisterBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:text="Register"
+                app:layout_constraintEnd_toEndOf="@+id/LogInPageLogInBTN"
+                app:layout_constraintStart_toStartOf="@+id/LogInPageLogInBTN"
+                app:layout_constraintTop_toBottomOf="@+id/LogInPageLogInBTN" />
+
+            <TextView
+                android:id="@+id/logInPageForgotPasswordTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:text="Forgot password?"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/LogInPageRegisterBTN"
+                app:layout_constraintStart_toStartOf="@+id/LogInPageRegisterBTN"
+                app:layout_constraintTop_toBottomOf="@+id/LogInPageRegisterBTN" />
+
+            <ProgressBar
+                android:id="@+id/logInPagePB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:indeterminateTint="@color/dark_button_color"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

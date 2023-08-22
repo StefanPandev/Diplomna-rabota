@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/add_spot_dialog_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/openSpotDialogReportIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/report_icon"
+                android:background="@drawable/rounded_square"
+                android:backgroundTint="@color/button_red"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/openSpotDialogReportIV"
+                app:cardCornerRadius="@dimen/_15sdp"
+                android:id="@+id/openSpotDialogIVCV">
+
+                <ImageView
+                    android:id="@+id/openSpotDialogIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/openSpotDialogRatingTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:text="Rating: "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/openSpotDialogCV"
+                app:layout_constraintTop_toBottomOf="@+id/openSpotDialogIVCV" />
+
+            <TextView
+                android:id="@+id/openSpotDialogVisitorsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:text="Visitors: "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/openSpotDialogCV"
+                app:layout_constraintTop_toBottomOf="@+id/openSpotDialogIVCV" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/openSpotDialogCV"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:backgroundTint="@color/bottom_nav_color"
+                app:cardCornerRadius="@dimen/_20sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/openSpotDialogRatingTV">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Spot Features"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/openSpotDialogRV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10" />
+
+                    </androidx.core.widget.NestedScrollView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/openSpotDialogVisitBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dark_button_color"
+                android:text="Visit"
+                app:layout_constraintStart_toStartOf="@+id/openSpotDialogCV"
+                app:layout_constraintTop_toTopOf="@+id/openSpotDialogRateBTN" />
+
+            <Button
+                android:id="@+id/openSpotDialogRateBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:backgroundTint="@color/dark_button_color"
+                android:text="Rate Spot"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/openSpotDialogCV"
+                app:layout_constraintTop_toBottomOf="@+id/openSpotDialogRateWithBTN" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/openSpotDialogRatingSlider"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:stepSize="0.5"
+                android:valueFrom="0"
+                android:valueTo="10"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/openSpotDialogCV"
+                app:layout_constraintStart_toStartOf="@+id/openSpotDialogCV"
+                app:layout_constraintTop_toBottomOf="@+id/openSpotDialogCV" />
+
+            <Button
+                android:id="@+id/openSpotDialogRateWithBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:backgroundTint="@color/dark_button_color"
+                android:text="Rate with"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/openSpotDialogRatingSlider"
+                app:layout_constraintStart_toStartOf="@+id/openSpotDialogRatingSlider"
+                app:layout_constraintTop_toBottomOf="@+id/openSpotDialogRatingSlider" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
